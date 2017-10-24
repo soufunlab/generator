@@ -37,4 +37,23 @@ public class ${className}SearchParameter implements Serializable {
     }  
     </#list>  
 </#macro>
+
+	//排序集合
+	List<String> orderList = new ArrayList<String>();
+	public String getOrderByClause(){
+		if(orderList.size()>0){
+			return String.join(",",orderList);
+		}
+		return null;
+    }
+	//alias
+	<#list table.columns as column>  
+   
+	public void andOrderBy${column.columnName}ASC(){
+		orderList.add("${table.getSqlName()}.${column.getSqlName()} ASC");
+	}
+	public void andOrderBy${column.columnName}DESC(){
+		orderList.add("${table.getSqlName()}.${column.getSqlName()} DESC");
+	}
+    </#list> 
 }

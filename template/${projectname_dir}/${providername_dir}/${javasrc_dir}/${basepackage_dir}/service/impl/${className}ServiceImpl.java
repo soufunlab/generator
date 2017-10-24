@@ -26,6 +26,8 @@ public class ${className}ServiceImpl extends  BaseServiceImpl<${className}, ${cl
 	public List<${className}> get${className}ListByCondition(${className}SearchParameter searchVo){
 		
 		${className}Example example = new ${className}Example();
+		example.setOrderByClause(searchVo.getOrderByClause());
+		
         ${className}Example.Criteria criteria = example.createCriteria();
         criteria.andIsActiveEqualTo(1);
 		
@@ -45,6 +47,8 @@ public class ${className}ServiceImpl extends  BaseServiceImpl<${className}, ${cl
 	public Pagination<${className}> get${className}PageListByCondition(${className}SearchParameter searchVo,Pagination page){
 		
 		${className}Example example = new ${className}Example();
+		example.setOrderByClause(searchVo.getOrderByClause());
+		
         ${className}Example.Criteria criteria = example.createCriteria();
         criteria.andIsActiveEqualTo(1);
 		
