@@ -1,0 +1,63 @@
+<#assign className = table.className>   
+<#assign classNameLower = className?uncap_first> 
+
+<html>
+<style>
+table,th,tr,td{
+	border: 1px solid #ddd;
+}
+
+table{
+	border:0px
+	cellspacing:0px
+}
+</style>
+
+<p>${className}</p>
+<table border="0" 
+cellspacing="0">
+	<tr>
+		<td>字段</td><td>类型</td><td>空</td><td>默认</td><td>注释</td>
+	</tr>
+	<#list table.columns as column>  
+	<tr>
+		<td>${column.columnNameLower}</td>
+		<td>${column.simpleJavaType}</td>
+		<td>否</td>
+		<td></td>
+		<td>${column.remarks}</td>
+	</tr>
+	</#list> 
+</table>
+
+<!--添加-->
+<p>简要描述：</p>
+<p>新增实体</p>
+</br>
+<p>方法签名：</p>
+<p>Result<${className}> add${className}(${className} entity, String sessionId);</p>
+</br>
+<p>入参信息</p>
+<table border="0" 
+cellspacing="0">
+	<tr>
+		<td>字段</td><td>类型</td><td>空</td><td>默认</td><td>注释</td>
+	</tr>
+	<tr>
+		<td>entity</td>
+		<td>${className}</td>
+		<td>否</td>
+		<td></td>
+		<td>插入实体</td>
+	</tr>
+	<tr>
+		<td>sessionId</td>
+		<td>String</td>
+		<td>否</td>
+		<td></td>
+		<td>会话id</td>
+	</tr>	
+</table>
+</br>
+
+</html>
