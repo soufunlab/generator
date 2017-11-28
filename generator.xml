@@ -7,7 +7,7 @@
 		2.可以引用环境变量: ${env.JAVA_HOME} or System.properties: ${user.home},property之间也可以相互引用
 	</comment>
 	
-	<entry key="basepackage">com.cloudyoung.ec.operation</entry><!--放置于哪个中心-->
+	<entry key="basepackage">com.cloudyoung.ec.order</entry><!--放置于哪个中心-->
 	<entry key="modelpackage"></entry> <!--生成实体的包路径 ： 表名去掉“_”+.model--> 
 	<entry key="mapperpath"></entry><!-- 生成mapper.xml文件中mapper文件路径-->
 	<entry key="modelpath"></entry><!--生成实体名称 ： 表名去掉“_”-->
@@ -33,7 +33,7 @@
 	
 	<!-- Mysql  -->
 	<entry key="jdbc.driver">com.mysql.jdbc.Driver</entry>
-	<entry key="jdbc.url">jdbc:mysql://192.168.10.22:3306/platform_operation?characterEncoding=utf8</entry>
+	<entry key="jdbc.url">jdbc:mysql://192.168.10.22:3306/platform_order?characterEncoding=utf8</entry>
 	<entry key="jdbc.username">cy_ec_admin</entry>
 	<entry key="jdbc.password">1qaz@WSX</entry>
 		
@@ -52,10 +52,10 @@
 	<entry key="java_typemapping.java.lang.Long">Long</entry>
 	<entry key="java_typemapping.java.math.BigDecimal">BigDecimal</entry>
 	
-	<entry key="projectname">cloud-ec-operation-center</entry>
-	<entry key="apiname">cloud-ec-operation-api</entry>
-	<entry key="providername">cloud-ec-operation-provider</entry>
-	<entry key="errconstants">operationErrorConstants</entry>
+	<entry key="projectname">cloud-ec-order-center</entry>
+	<entry key="apiname">cloud-ec-order-api</entry>
+	<entry key="providername">cloud-ec-order-provider</entry>
+	<entry key="errconstants">OrderErrorConstants</entry>
 	
 	<!--不用改动-->
 	<entry key="javasrc">src.main.java</entry>
